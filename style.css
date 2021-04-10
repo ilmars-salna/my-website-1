@@ -1,0 +1,413 @@
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/*HEADER*/
+
+header{
+    background:#aaa;
+    text-align:center;
+    padding:1px; /*Somehow fixes the margin issue*/
+}
+
+/*NAVIGATION*/
+
+nav{
+    background:#ddd;
+    padding:10px;
+}
+
+nav ul{
+    display:flex;
+    list-style: none;
+    padding-left:0;
+    justify-content:center;
+}
+
+nav ul li{
+    padding:0 25px;
+}
+
+nav ul li a{
+    color:black;
+    text-decoration:none;
+    padding:5px;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+}
+
+/* NAVIGATION RESPONSIVE */
+
+@media(max-width:768px){
+    /* WHAT RULES APPLY WHEN THE SCREEN SIZE GETS TO 768PX OR LOWER */
+    nav ul{
+        flex-direction: column;
+        align-items:center;
+    }
+
+    nav ul span{
+        color:#ddd;
+    }
+}
+
+/*MAIN*/
+
+main{
+    background:#aaa;
+    padding:1px; /*Again, somehow fixes the margin issue*/
+    
+}
+
+main .container{
+    
+    margin:0 auto;
+    max-width:1280px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+main .container .about{
+    /**/
+    max-width:500px;
+    margin-right:50px;
+}
+
+main .container .about h2{
+    /**/
+    font-size:32px;
+    letter-spacing:4px;
+}
+
+main .container .about code{
+    /**/
+    font-size: 1.2em;
+    font-weight:bold;
+}
+
+#button{
+    padding:15px 10px;
+    text-decoration:none;
+    
+    color:#eee;
+    background:#333;
+    font-size:20px;
+}
+
+main .container .photo{
+    /**/
+    width:300px;
+    height:400px;
+    box-shadow:2px 4px 10px #333;
+}
+
+/* MAIN RESPONSIVE */
+
+@media(max-width:1024px){
+    /* WHAT RULES APPLY WHEN THE SCREEN SIZE GETS TO 1024PX OR LOWER */
+    main .container{
+        display:initial;
+        text-align:center;
+    }
+
+    main .container .about{
+        /**/
+        margin:0 auto;
+    }
+
+    main .container .photo{
+        /**/
+        margin:50px auto 30px auto;
+    }
+}
+
+/*PREVIEW*/
+
+#preview{
+    background:#ddd;
+    padding:1px; /*Margin fix*/
+    padding-bottom:100px;
+}
+
+#preview .container{
+    max-width:1280px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.flex-container-photo{
+    display:flex;
+    justify-content:center;
+}
+
+.flex-container-photo .photo{
+    width:250px;
+    height:150px;
+    margin:10px;
+    box-shadow:2px 4px 10px #333;
+}
+
+.flex-container-recipe{
+    display:flex;
+    justify-content:center;
+}
+
+.flex-container-recipe h4{
+    font-style:italic;
+}
+
+.flex-container-recipe .recipe{
+    /**/
+    margin:10px;
+}
+
+.flex-container-recipe .recipe .recipe-photo{
+    width:250px;
+    height:150px;
+    box-shadow:2px 4px 10px #333;
+}
+
+#preview h2{
+    font-size:28px;
+}
+
+#preview h3{
+    font-size:24px;
+    font-weight:500;
+    padding-bottom:7px;
+    border-bottom:1px dashed black;
+    width:80%;
+    margin:0 auto;
+
+    border-top:1px dashed black;
+    padding-top:7px;
+}
+
+/* PREVIEW RESPONSIVE */
+
+@media(max-width:868px){
+    /* WHAT RULES APPLY WHEN THE SCREEN SIZE GETS TO 868PX OR LOWER */
+    .flex-container-photo{
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .flex-container-recipe{
+        flex-direction: column;
+        align-items:center;
+    }
+}
+
+/*FOOTER*/
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+/*PHOTO GALLERY*/
+
+#feature-photo{
+    background:#aaa;
+    padding:50px 0; /*margin fix*/
+}
+
+#feature-photo .container{
+    max-width:860px;
+    margin:0 auto;
+    text-align:center;
+}
+
+/*CITY AND NATURE*/
+
+#gallery{
+    background:#eee;
+    padding:1px;
+    text-align:center;
+}
+
+.citynature-gallery, .food-gallery{
+    max-width:1000px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    align-items:center;
+    grid-gap:1em;
+}
+
+#gallery .container{
+    background:#aaa;
+    padding:50px 0;
+}
+
+#gallery .container-citynature{
+    padding:50px 0;
+}
+
+.food-gallery > img{
+    /**/
+    box-shadow:2px 4px 10px #333;
+}
+
+.citynature-gallery > img{
+    box-shadow:2px 4px 10px #333;
+}
+
+/*CITY AND NATURE RESPONSIVE*/
+
+@media(max-width:828px){
+    .citynature-gallery, .food-gallery{
+        max-width:1000px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        justify-items:center;
+        align-items:center;
+        grid-gap:1em;
+    }
+
+    .citynature-gallery > img:nth-child(9){
+        grid-column: 1/3;
+    }
+
+    .food-gallery > img:nth-child(9){
+        grid-column: 1/3;
+    }
+}
+
+@media(max-width:600px){
+    .citynature-gallery, .food-gallery{
+        display:initial;
+    }
+
+    .citynature-gallery > img{
+        margin-bottom:10px;
+    }
+
+    .food-gallery > img{
+        margin-bottom:10px;
+    }
+}
+
+/*FEATURE RECIPES */
+
+#feature-recipes{
+    background:#bbb;
+    padding:10px;
+    text-align:center;
+}
+
+#feature-recipes .container{
+    max-width:860px;
+    margin:0 auto;
+}
+
+/*RECIPES*/
+
+#recipe-container{
+    background:#ddd;
+    padding: 10px;
+}
+
+.recipes-wrapper{
+    
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    justify-content:center;
+    grid-gap:1em;
+    padding:20px;
+}
+
+@media(max-width:1100px){
+    .recipes-wrapper{
+        display:flex;
+        flex-direction:column;
+        /**/
+        align-items: center;
+    }
+}
+
+#recipe-container .recipe{
+    
+    box-shadow:2px 4px 10px #333;
+    /*display:inline-block;*/
+    /*width:400px;*/
+    max-width:580px;
+    text-align:center;
+
+    line-height:1.2;
+    margin:5px;
+    padding:10px;
+}
+
+#recipe-container .recipe table{
+    width:80%;
+    margin:0 auto;
+}
+
+#recipe-container .recipe table tr:nth-child(even){
+    background:#eee;
+}
+
+#recipe-container .recipe table td{
+    /**/
+    padding:2px;
+    
+}
+
+#recipe-container .recipe table th{
+    /**/
+    padding:10px;
+}
+
+#recipe-container .recipe table td:nth-child(even){
+    text-align:center;
+}
+
+#recipe-container .recipe table td:nth-child(odd){
+    text-align:center;
+}
+
+#ingr{
+    letter-spacing:3px;
+    padding-bottom:5px;
+    display:inline-block;
+    border-bottom:1px solid black;
+}
+
+.recipe ol{
+    /*border:1px dotted blue;*/
+    /*display:inline-block;*/
+    text-align:left;
+    width:90%;
+    padding-left:10px;
+    font-size:0.9em;
+    line-height:1.2;
+    margin-top:0;
+    list-style: bold;
+}
+
+/*MAKES THE LIST NUMERATION BOLD*/
+
+ol {
+    counter-reset: item;
+}
+ol li { display: block }
+
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    font-weight: bold;
+}
+
+/*END*/
