@@ -124,6 +124,11 @@ main .container .photo{
         /**/
         margin:50px auto 30px auto;
     }
+
+    main .container .about{
+        /**/
+        padding:0 20px;
+    }
 }
 
 /*PREVIEW*/
@@ -225,6 +230,10 @@ footer{
     text-align:center;
 }
 
+#feature-photo .container p{
+    padding:0 30px;
+}
+
 /*CITY AND NATURE*/
 
 #gallery{
@@ -310,6 +319,10 @@ footer{
     margin:0 auto;
 }
 
+#feature-recipes p{
+    padding:0 20px;
+}
+
 /*RECIPES*/
 
 #recipe-container{
@@ -337,6 +350,28 @@ footer{
     }
 }
 
+/*RECIPE CARDS ON SMALL WIDTH*/
+
+@media(max-width:700px){
+    #recipe-container{
+        
+    }
+
+    .recipes-wrapper{
+        
+        padding:5px;
+        margin:0;
+    }
+
+    #recipe-container .recipe{
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+}
+
+/*RECIPE CARDS*/
+
 #recipe-container .recipe{
     
     box-shadow:2px 4px 10px #333;
@@ -353,6 +388,17 @@ footer{
 #recipe-container .recipe table{
     width:80%;
     margin:0 auto;
+}
+
+@media(max-width:700px){
+    #recipe-container .recipe table{
+        width:95%;
+    }
+}
+
+.recipe-image img{
+    /**/
+    box-shadow:2px 4px 10px #333;
 }
 
 #recipe-container .recipe table tr:nth-child(even){
